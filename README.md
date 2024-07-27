@@ -1,1 +1,3 @@
 # Intelligent-Financial-Analysis-and-Reporting-System
+
+The "Intelligent Financial Analysis and Reporting System" project aims to develop an advanced BI reporting system that supports the management and analysis of financial data, enabling managers to make data-driven decisions accurately, efficiently, and promptly. By utilizing Python, the PostgreSQL database system, and Power BI tools, this system not only saves time and resources but also provides detailed and accurate financial reports. Consequently, strategic decisions are optimally supported, enhancing financial management efficiency for the enterprise.
