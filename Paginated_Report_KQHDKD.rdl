@@ -1,0 +1,1705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily" xmlns:am="http://schemas.microsoft.com/sqlserver/reporting/authoringmetadata">
+  <rd:ReportUnitType>Mm</rd:ReportUnitType>
+  <rd:ReportID>92ca26e8-f519-42c9-893e-d8140b9b7a38</rd:ReportID>
+  <am:AuthoringMetadata>
+    <am:CreatedBy>
+      <am:Name>PBIRB</am:Name>
+      <am:Version>15.7.1809.28</am:Version>
+    </am:CreatedBy>
+    <am:UpdatedBy>
+      <am:Name>PBIRB</am:Name>
+      <am:Version>15.7.1809.28</am:Version>
+    </am:UpdatedBy>
+    <am:LastModifiedTimestamp>2024-07-07T08:55:27.9372264Z</am:LastModifiedTimestamp>
+  </am:AuthoringMetadata>
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="MyWorkspace_dashboard_datn1">
+      <rd:SecurityType>None</rd:SecurityType>
+      <ConnectionProperties>
+        <DataProvider>PBIDATASET</DataProvider>
+        <ConnectString>Data Source=pbiazure://api.powerbi.com/;Identity Provider="https://login.microsoftonline.com/organizations, https://analysis.windows.net/powerbi/api, f0b72488-7082-488a-a7e8-eada97bd842d";Initial Catalog=sobe_wowvirtualserver-92906fbd-6c8e-42de-a5b4-3bec5405defd;Integrated Security=ClaimsToken</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>c2e1ad0f-6bdb-4ad9-b02e-421fccc3a48d</rd:DataSourceID>
+      <rd:PowerBIWorkspaceName>My Workspace</rd:PowerBIWorkspaceName>
+      <rd:PowerBIDatasetName>dashboard_datn (1)</rd:PowerBIDatasetName>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="test">
+      <Query>
+        <DataSourceName>MyWorkspace_dashboard_datn1</DataSourceName>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>DAX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>fact_kqhdkd</DimensionName>
+                      <HierarchyName>company_id</HierarchyName>
+                      <HierarchyUniqueName>[fact_kqhdkd].[company_id]</HierarchyUniqueName>
+                      <LevelName>company_id</LevelName>
+                      <UniqueName>[fact_kqhdkd].[company_id].[company_id]</UniqueName>
+                    </ID>
+                    <ItemCaption>company_id</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>fact_kqhdkd</DimensionName>
+                      <HierarchyName>date_id</HierarchyName>
+                      <HierarchyUniqueName>[fact_kqhdkd].[date_id]</HierarchyUniqueName>
+                      <LevelName>date_id</LevelName>
+                      <UniqueName>[fact_kqhdkd].[date_id].[date_id]</UniqueName>
+                    </ID>
+                    <ItemCaption>date_id</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_kqhdkd</DimensionName>
+                      <HierarchyName>level2_id</HierarchyName>
+                      <HierarchyUniqueName>[dim_kqhdkd].[level2_id]</HierarchyUniqueName>
+                      <LevelName>level2_id</LevelName>
+                      <UniqueName>[dim_kqhdkd].[level2_id].[level2_id]</UniqueName>
+                    </ID>
+                    <ItemCaption>level2_id</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>fact_kqhdkd</DimensionName>
+                      <HierarchyName>id</HierarchyName>
+                      <HierarchyUniqueName>[fact_kqhdkd].[id]</HierarchyUniqueName>
+                      <LevelName>id</LevelName>
+                      <UniqueName>[fact_kqhdkd].[id].[id]</UniqueName>
+                    </ID>
+                    <ItemCaption>id</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_kqhdkd</DimensionName>
+                      <HierarchyName>level2_name</HierarchyName>
+                      <HierarchyUniqueName>[dim_kqhdkd].[level2_name]</HierarchyUniqueName>
+                      <LevelName>level2_name</LevelName>
+                      <UniqueName>[dim_kqhdkd].[level2_name].[level2_name]</UniqueName>
+                    </ID>
+                    <ItemCaption>level2_name</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>fact_kqhdkd</DimensionName>
+                      <HierarchyName>value</HierarchyName>
+                      <HierarchyUniqueName>[fact_kqhdkd].[value]</HierarchyUniqueName>
+                      <LevelName>value</LevelName>
+                      <UniqueName>[fact_kqhdkd].[value].[value]</UniqueName>
+                    </ID>
+                    <ItemCaption>value</ItemCaption>
+                  </Item>
+                </Items>
+              </Select>
+              <AutoExecute>false</AutoExecute>
+              <From>Model</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement>EVALUATE 
+SUMMARIZECOLUMNS(
+    'fact_kqhdkd'[company_id], 
+    'fact_kqhdkd'[date_id], 
+    'dim_kqhdkd'[level2_id], 
+    'fact_kqhdkd'[id], 
+    'dim_kqhdkd'[level2_name], 
+    'fact_kqhdkd'[value],
+    FILTER(
+        'fact_kqhdkd',
+        'fact_kqhdkd'[id] = RELATED('dim_kqhdkd'[level2_id])
+    )
+)
+
+</Statement>
+              <ParameterDefinitions />
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <CommandText>EVALUATE 
+SUMMARIZECOLUMNS(
+    'fact_kqhdkd'[company_id], 
+    'fact_kqhdkd'[date_id], 
+    'dim_kqhdkd'[level2_id], 
+    'fact_kqhdkd'[id], 
+    'dim_kqhdkd'[level2_name], 
+    'fact_kqhdkd'[value],
+    FILTER(
+        'fact_kqhdkd',
+        'fact_kqhdkd'[id] = RELATED('dim_kqhdkd'[level2_id])
+    )
+)
+</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="company_id">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>fact_kqhdkd[company_id]</DataField>
+        </Field>
+        <Field Name="date_id">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>fact_kqhdkd[date_id]</DataField>
+        </Field>
+        <Field Name="level2_id">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_kqhdkd[level2_id]</DataField>
+        </Field>
+        <Field Name="id">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>fact_kqhdkd[id]</DataField>
+        </Field>
+        <Field Name="level2_name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_kqhdkd[level2_name]</DataField>
+        </Field>
+        <Field Name="value">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>fact_kqhdkd[value]</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>MyWorkspace_dashboard_datn1</DataSourceName>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>DAX</CommandType>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_company</DimensionName>
+                      <HierarchyName>company_id</HierarchyName>
+                      <HierarchyUniqueName>[dim_company].[company_id]</HierarchyUniqueName>
+                      <LevelName>company_id</LevelName>
+                      <UniqueName>[dim_company].[company_id].[company_id]</UniqueName>
+                    </ID>
+                    <ItemCaption>company_id</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_company</DimensionName>
+                      <HierarchyName>company_name</HierarchyName>
+                      <HierarchyUniqueName>[dim_company].[company_name]</HierarchyUniqueName>
+                      <LevelName>company_name</LevelName>
+                      <UniqueName>[dim_company].[company_name].[company_name]</UniqueName>
+                    </ID>
+                    <ItemCaption>company_name</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_date</DimensionName>
+                      <HierarchyName>year</HierarchyName>
+                      <HierarchyUniqueName>[dim_date].[year]</HierarchyUniqueName>
+                      <LevelName>year</LevelName>
+                      <UniqueName>[dim_date].[year].[year]</UniqueName>
+                    </ID>
+                    <ItemCaption>year</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>TotalValueByYearAndCompany</MeasureName>
+                      <UniqueName>[Measures].[TotalValueByYearAndCompany]</UniqueName>
+                    </ID>
+                    <ItemCaption>TotalValueByYearAndCompany</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                  </Item>
+                </Items>
+              </Select>
+              <AutoExecute>false</AutoExecute>
+              <From>Model</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties>
+                <IncludeMemberValue>true</IncludeMemberValue>
+              </QueryProperties>
+            </QuerySpecification>
+            <Query>
+              <Statement>EVALUATE SUMMARIZECOLUMNS('dim_company'[company_id], 'dim_company'[company_name], 'dim_date'[year], "TotalValueByYearAndCompany", [TotalValueByYearAndCompany])</Statement>
+              <ParameterDefinitions />
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <CommandText>EVALUATE SUMMARIZECOLUMNS('dim_company'[company_id], 'dim_company'[company_name], 'dim_date'[year], "TotalValueByYearAndCompany", [TotalValueByYearAndCompany])</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="company_id">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_company[company_id]</DataField>
+        </Field>
+        <Field Name="company_name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_company[company_name]</DataField>
+        </Field>
+        <Field Name="year">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_date[year]</DataField>
+        </Field>
+        <Field Name="TotalValueByYearAndCompany">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[TotalValueByYearAndCompany]</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DataSet3">
+      <Query>
+        <DataSourceName>MyWorkspace_dashboard_datn1</DataSourceName>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>DAX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_company</DimensionName>
+                      <HierarchyName>company_id</HierarchyName>
+                      <HierarchyUniqueName>[dim_company].[company_id]</HierarchyUniqueName>
+                      <LevelName>company_id</LevelName>
+                      <UniqueName>[dim_company].[company_id].[company_id]</UniqueName>
+                    </ID>
+                    <ItemCaption>company_id</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_company</DimensionName>
+                      <HierarchyName>company_name</HierarchyName>
+                      <HierarchyUniqueName>[dim_company].[company_name]</HierarchyUniqueName>
+                      <LevelName>company_name</LevelName>
+                      <UniqueName>[dim_company].[company_name].[company_name]</UniqueName>
+                    </ID>
+                    <ItemCaption>company_name</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_date</DimensionName>
+                      <HierarchyName>year</HierarchyName>
+                      <HierarchyUniqueName>[dim_date].[year]</HierarchyUniqueName>
+                      <LevelName>year</LevelName>
+                      <UniqueName>[dim_date].[year].[year]</UniqueName>
+                    </ID>
+                    <ItemCaption>year</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_kqhdkd</DimensionName>
+                      <HierarchyName>level2_id</HierarchyName>
+                      <HierarchyUniqueName>[dim_kqhdkd].[level2_id]</HierarchyUniqueName>
+                      <LevelName>level2_id</LevelName>
+                      <UniqueName>[dim_kqhdkd].[level2_id].[level2_id]</UniqueName>
+                    </ID>
+                    <ItemCaption>level2_id</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_kqhdkd</DimensionName>
+                      <HierarchyName>level2_name</HierarchyName>
+                      <HierarchyUniqueName>[dim_kqhdkd].[level2_name]</HierarchyUniqueName>
+                      <LevelName>level2_name</LevelName>
+                      <UniqueName>[dim_kqhdkd].[level2_name].[level2_name]</UniqueName>
+                    </ID>
+                    <ItemCaption>level2_name</ItemCaption>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>TotalValueByYearCompanyLevel2</MeasureName>
+                      <UniqueName>[Measures].[TotalValueByYearCompanyLevel2]</UniqueName>
+                    </ID>
+                    <ItemCaption>TotalValueByYearCompanyLevel2</ItemCaption>
+                  </Item>
+                </Items>
+              </Select>
+              <AutoExecute>false</AutoExecute>
+              <From>Model</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement>EVALUATE 
+SUMMARIZECOLUMNS (
+    'dim_company'[company_id],
+    'dim_company'[company_name],
+    'dim_date'[year],
+    'dim_kqhdkd'[level2_id],
+    'dim_kqhdkd'[level2_name],
+    FILTER (
+        'dim_kqhdkd',
+        'dim_kqhdkd'[level2_id] IN { "01", "02", "10", "11", "20", "21", "22", "23", "24", "30", "31", "32", "40", "50", "51", "61" }
+    ),
+    "TotalValueByYearCompanyLevel2", 
+    CALCULATE (
+        SUM ( fact_kqhdkd[value] )
+    )
+)
+</Statement>
+              <ParameterDefinitions />
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <CommandText>EVALUATE 
+SUMMARIZECOLUMNS (
+    'dim_company'[company_id],
+    'dim_company'[company_name],
+    'dim_date'[year],
+    'dim_kqhdkd'[level2_id],
+    'dim_kqhdkd'[level2_name],
+    FILTER (
+        'dim_kqhdkd',
+        'dim_kqhdkd'[level2_id] IN { "01", "02", "10", "11", "20", "21", "22", "23", "24", "30", "31", "32", "40", "50", "51", "61" }
+    ),
+    "TotalValueByYearCompanyLevel2", 
+    CALCULATE (
+        SUM ( fact_kqhdkd[value] )
+    )
+)
+</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="company_id">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_company[company_id]</DataField>
+        </Field>
+        <Field Name="company_name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_company[company_name]</DataField>
+        </Field>
+        <Field Name="year">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_date[year]</DataField>
+        </Field>
+        <Field Name="level2_id">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_kqhdkd[level2_id]</DataField>
+        </Field>
+        <Field Name="level2_name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_kqhdkd[level2_name]</DataField>
+        </Field>
+        <Field Name="TotalValueByYearCompanyLevel2">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[TotalValueByYearCompanyLevel2]</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="dimdateyear">
+      <Query>
+        <DataSourceName>MyWorkspace_dashboard_datn1</DataSourceName>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>DAX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterCaption</MeasureName>
+                      <UniqueName>[Measures].[ParameterCaption]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterCaption</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterValue</MeasureName>
+                      <UniqueName>[Measures].[ParameterValue]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterValue</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterLevel</MeasureName>
+                      <UniqueName>[Measures].[ParameterLevel]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterLevel</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                </Items>
+              </Select>
+              <AutoExecute>false</AutoExecute>
+              <From>Model</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('dim_date'[year], "h0")), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'dim_date'[year], "Blank()"), "ParameterValue", 'dim_date'[year], "ParameterLevel", [ParameterLevel], "'dim_date'[year]", 'dim_date'[year]) order by 'dim_date'[year], [ParameterLevel]</Statement>
+              <ParameterDefinitions />
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+        <CommandText>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('dim_date'[year], "h0")), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'dim_date'[year], "Blank()"), "ParameterValue", 'dim_date'[year], "ParameterLevel", [ParameterLevel], "'dim_date'[year]", 'dim_date'[year]) order by 'dim_date'[year], [ParameterLevel]</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ParameterCaption">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterCaption]</DataField>
+        </Field>
+        <Field Name="ParameterValue">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterValue]</DataField>
+        </Field>
+        <Field Name="ParameterLevel">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterLevel]</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <rd:TypeName>System.String</rd:TypeName>
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="dimcompanycompanyname">
+      <Query>
+        <DataSourceName>MyWorkspace_dashboard_datn1</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="dimdateyear">
+            <Value>=Parameters!dimdateyear.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>DAX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterCaption</MeasureName>
+                      <UniqueName>[Measures].[ParameterCaption]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterCaption</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterValue</MeasureName>
+                      <UniqueName>[Measures].[ParameterValue]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterValue</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterLevel</MeasureName>
+                      <UniqueName>[Measures].[ParameterLevel]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterLevel</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                </Items>
+              </Select>
+              <AutoExecute>false</AutoExecute>
+              <From>Model</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('dim_company'[company_name], "h0"), RSCustomDaxFilter(@dimdateyear,EqualToCondition,[dim_date].[year],Int64)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'dim_company'[company_name], "Blank()"), "ParameterValue", 'dim_company'[company_name], "ParameterLevel", [ParameterLevel], "'dim_company'[company_name]", 'dim_company'[company_name]) order by 'dim_company'[company_name], [ParameterLevel]</Statement>
+              <ParameterDefinitions>
+                <ParameterDefinition>
+                  <Name>dimdateyear</Name>
+                  <DbType>Int64</DbType>
+                  <DefaultValues>
+                    <DefaultValue>2019</DefaultValue>
+                    <DefaultValue>2020</DefaultValue>
+                    <DefaultValue>2021</DefaultValue>
+                    <DefaultValue>2022</DefaultValue>
+                    <DefaultValue>2023</DefaultValue>
+                  </DefaultValues>
+                  <Caption>year</Caption>
+                  <HierarchyUniqueName>[dim_date].[year]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('dim_date'[year], "h0")), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'dim_date'[year], "Blank()"), "ParameterValue", 'dim_date'[year], "ParameterLevel", [ParameterLevel], "'dim_date'[year]", 'dim_date'[year]) order by 'dim_date'[year], [ParameterLevel]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                  <AllowBlank>true</AllowBlank>
+                </ParameterDefinition>
+              </ParameterDefinitions>
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+        <CommandText>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('dim_company'[company_name], "h0"), RSCustomDaxFilter(@dimdateyear,EqualToCondition,[dim_date].[year],Int64)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'dim_company'[company_name], "Blank()"), "ParameterValue", 'dim_company'[company_name], "ParameterLevel", [ParameterLevel], "'dim_company'[company_name]", 'dim_company'[company_name]) order by 'dim_company'[company_name], [ParameterLevel]</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ParameterCaption">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterCaption]</DataField>
+        </Field>
+        <Field Name="ParameterValue">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterValue]</DataField>
+        </Field>
+        <Field Name="ParameterLevel">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterLevel]</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <rd:TypeName>System.String</rd:TypeName>
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="test2">
+      <Query>
+        <DataSourceName>MyWorkspace_dashboard_datn1</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="dimdateyear">
+            <Value>=Parameters!dimdateyear.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="dimcompanycompanyname">
+            <Value>=Parameters!dimcompanycompanyname.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>DAX</CommandType>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_company</DimensionName>
+                      <HierarchyName>company_id</HierarchyName>
+                      <HierarchyUniqueName>[dim_company].[company_id]</HierarchyUniqueName>
+                      <LevelName>company_id</LevelName>
+                      <UniqueName>[dim_company].[company_id].[company_id]</UniqueName>
+                    </ID>
+                    <ItemCaption>company_id</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_company</DimensionName>
+                      <HierarchyName>company_name</HierarchyName>
+                      <HierarchyUniqueName>[dim_company].[company_name]</HierarchyUniqueName>
+                      <LevelName>company_name</LevelName>
+                      <UniqueName>[dim_company].[company_name].[company_name]</UniqueName>
+                    </ID>
+                    <ItemCaption>company_name</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_date</DimensionName>
+                      <HierarchyName>year</HierarchyName>
+                      <HierarchyUniqueName>[dim_date].[year]</HierarchyUniqueName>
+                      <LevelName>year</LevelName>
+                      <UniqueName>[dim_date].[year].[year]</UniqueName>
+                    </ID>
+                    <ItemCaption>year</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_kqhdkd</DimensionName>
+                      <HierarchyName>level2_id</HierarchyName>
+                      <HierarchyUniqueName>[dim_kqhdkd].[level2_id]</HierarchyUniqueName>
+                      <LevelName>level2_id</LevelName>
+                      <UniqueName>[dim_kqhdkd].[level2_id].[level2_id]</UniqueName>
+                    </ID>
+                    <ItemCaption>level2_id</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_kqhdkd</DimensionName>
+                      <HierarchyName>level2_name</HierarchyName>
+                      <HierarchyUniqueName>[dim_kqhdkd].[level2_name]</HierarchyUniqueName>
+                      <LevelName>level2_name</LevelName>
+                      <UniqueName>[dim_kqhdkd].[level2_name].[level2_name]</UniqueName>
+                    </ID>
+                    <ItemCaption>level2_name</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>dim_date</DimensionName>
+                      <HierarchyName>Previous_Year</HierarchyName>
+                      <HierarchyUniqueName>[dim_date].[Previous_Year]</HierarchyUniqueName>
+                      <LevelName>Previous_Year</LevelName>
+                      <UniqueName>[dim_date].[Previous_Year].[Previous_Year]</UniqueName>
+                    </ID>
+                    <ItemCaption>Previous_Year</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>TotalValueByYearCompanyLevel23456</MeasureName>
+                      <UniqueName>[Measures].[TotalValueByYearCompanyLevel23456]</UniqueName>
+                    </ID>
+                    <ItemCaption>TotalValueByYearCompanyLevel23456</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                  </Item>
+                </Items>
+              </Select>
+              <AutoExecute>false</AutoExecute>
+              <From>Model</From>
+              <Filter>
+                <FilterItems>
+                  <FilterItem>
+                    <HierarchyUniqueName>[dim_date].[year]</HierarchyUniqueName>
+                    <Condition xsi:type="EqualTo">
+                      <Members>
+                        <Member>
+                          <MemberUniqueName>[dim_date].[year].&amp;[2019]</MemberUniqueName>
+                        </Member>
+                        <Member>
+                          <MemberUniqueName>[dim_date].[year].&amp;[2020]</MemberUniqueName>
+                        </Member>
+                        <Member>
+                          <MemberUniqueName>[dim_date].[year].&amp;[2021]</MemberUniqueName>
+                        </Member>
+                        <Member>
+                          <MemberUniqueName>[dim_date].[year].&amp;[2022]</MemberUniqueName>
+                        </Member>
+                        <Member>
+                          <MemberUniqueName>[dim_date].[year].&amp;[2023]</MemberUniqueName>
+                        </Member>
+                      </Members>
+                      <Parametrized>true</Parametrized>
+                    </Condition>
+                  </FilterItem>
+                  <FilterItem>
+                    <HierarchyUniqueName>[dim_company].[company_name]</HierarchyUniqueName>
+                    <Condition xsi:type="EqualTo">
+                      <Members>
+                        <Member>
+                          <MemberUniqueName>[dim_company].[company_name].&amp;[Công ty Cổ phần AAV Group]</MemberUniqueName>
+                        </Member>
+                        <Member>
+                          <MemberUniqueName>[dim_company].[company_name].&amp;[Công ty Cổ phần Địa ốc Sài Gòn Thương Tín]</MemberUniqueName>
+                        </Member>
+                        <Member>
+                          <MemberUniqueName>[dim_company].[company_name].&amp;[Công ty cổ phần Tập đoàn Đầu tư Địa ốc No Va]</MemberUniqueName>
+                        </Member>
+                        <Member>
+                          <MemberUniqueName>[dim_company].[company_name].&amp;[Tập đoàn Vingroup - Công ty cổ phần]</MemberUniqueName>
+                        </Member>
+                        <Member>
+                          <MemberUniqueName>[dim_company].[company_name].&amp;[Tổng công ty đầu tư và phát triển công nghiệp]</MemberUniqueName>
+                        </Member>
+                      </Members>
+                      <Parametrized>true</Parametrized>
+                    </Condition>
+                  </FilterItem>
+                </FilterItems>
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties>
+                <IncludeMemberValue>true</IncludeMemberValue>
+              </QueryProperties>
+            </QuerySpecification>
+            <Query>
+              <Statement>EVALUATE SUMMARIZECOLUMNS('dim_company'[company_id], 'dim_company'[company_name], 'dim_date'[year], 'dim_kqhdkd'[level2_id], 'dim_kqhdkd'[level2_name], 'dim_date'[Previous_Year], RSCustomDaxFilter(@dimdateyear,EqualToCondition,[dim_date].[year],Int64), RSCustomDaxFilter(@dimcompanycompanyname,EqualToCondition,[dim_company].[company_name],String), "TotalValueByYearCompanyLevel23456", [TotalValueByYearCompanyLevel23456])</Statement>
+              <ParameterDefinitions>
+                <ParameterDefinition>
+                  <Name>dimdateyear</Name>
+                  <DbType>Int64</DbType>
+                  <DefaultValues>
+                    <DefaultValue>2019</DefaultValue>
+                    <DefaultValue>2020</DefaultValue>
+                    <DefaultValue>2021</DefaultValue>
+                    <DefaultValue>2022</DefaultValue>
+                    <DefaultValue>2023</DefaultValue>
+                  </DefaultValues>
+                  <Caption>year</Caption>
+                  <HierarchyUniqueName>[dim_date].[year]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('dim_date'[year], "h0")), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'dim_date'[year], "Blank()"), "ParameterValue", 'dim_date'[year], "ParameterLevel", [ParameterLevel], "'dim_date'[year]", 'dim_date'[year]) order by 'dim_date'[year], [ParameterLevel]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                  <AllowBlank>true</AllowBlank>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>dimcompanycompanyname</Name>
+                  <DefaultValues>
+                    <DefaultValue>Công ty Cổ phần AAV Group</DefaultValue>
+                    <DefaultValue>Công ty Cổ phần Địa ốc Sài Gòn Thương Tín</DefaultValue>
+                    <DefaultValue>Công ty cổ phần Tập đoàn Đầu tư Địa ốc No Va</DefaultValue>
+                    <DefaultValue>Tập đoàn Vingroup - Công ty cổ phần</DefaultValue>
+                    <DefaultValue>Tổng công ty đầu tư và phát triển công nghiệp</DefaultValue>
+                  </DefaultValues>
+                  <Caption>company_name</Caption>
+                  <HierarchyUniqueName>[dim_company].[company_name]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('dim_company'[company_name], "h0"), RSCustomDaxFilter(@dimdateyear,EqualToCondition,[dim_date].[year],Int64)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'dim_company'[company_name], "Blank()"), "ParameterValue", 'dim_company'[company_name], "ParameterLevel", [ParameterLevel], "'dim_company'[company_name]", 'dim_company'[company_name]) order by 'dim_company'[company_name], [ParameterLevel]</Statement>
+                    <ParameterizedStatement>
+                      <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('dim_company'[company_name], "h0"), RSCustomDaxFilter(@dimdateyear,EqualToCondition,[dim_date].[year],Int64)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'dim_company'[company_name], "Blank()"), "ParameterValue", 'dim_company'[company_name], "ParameterLevel", [ParameterLevel], "'dim_company'[company_name]", 'dim_company'[company_name]) order by 'dim_company'[company_name], [ParameterLevel]</Statement>
+                      <ReferencedParameters>
+                        <ReferencedParameter>
+                          <Name>dimdateyear</Name>
+                        </ReferencedParameter>
+                      </ReferencedParameters>
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                  <AllowBlank>true</AllowBlank>
+                </ParameterDefinition>
+              </ParameterDefinitions>
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <CommandText>EVALUATE SUMMARIZECOLUMNS('dim_company'[company_id], 'dim_company'[company_name], 'dim_date'[year], 'dim_kqhdkd'[level2_id], 'dim_kqhdkd'[level2_name], 'dim_date'[Previous_Year], RSCustomDaxFilter(@dimdateyear,EqualToCondition,[dim_date].[year],Int64), RSCustomDaxFilter(@dimcompanycompanyname,EqualToCondition,[dim_company].[company_name],String), "TotalValueByYearCompanyLevel23456", [TotalValueByYearCompanyLevel23456])</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="company_id">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_company[company_id]</DataField>
+        </Field>
+        <Field Name="company_name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_company[company_name]</DataField>
+        </Field>
+        <Field Name="year">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_date[year]</DataField>
+        </Field>
+        <Field Name="level2_id">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_kqhdkd[level2_id]</DataField>
+        </Field>
+        <Field Name="level2_name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_kqhdkd[level2_name]</DataField>
+        </Field>
+        <Field Name="Previous_Year">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>dim_date[Previous_Year]</DataField>
+        </Field>
+        <Field Name="TotalValueByYearCompanyLevel23456">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[TotalValueByYearCompanyLevel23456]</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix11">
+            <TablixCorner>
+              <TablixCornerRows>
+                <TablixCornerRow>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox68">
+                        <rd:DefaultName>Textbox68</rd:DefaultName>
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Chỉ tiêu</Value>
+                                <Style>
+                                  <FontSize>11pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>#666666</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Left</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <Style>
+                          <Border>
+                            <Style>Solid</Style>
+                          </Border>
+                          <TopBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </TopBorder>
+                          <BottomBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </BottomBorder>
+                          <LeftBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </LeftBorder>
+                          <RightBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </RightBorder>
+                          <BackgroundColor>White</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                  <TablixCornerCell>
+                    <CellContents>
+                      <Textbox Name="Textbox65">
+                        <rd:DefaultName>Textbox65</rd:DefaultName>
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Mã số</Value>
+                                <Style>
+                                  <FontSize>11pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>#666666</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <Style>
+                          <Border>
+                            <Style>Solid</Style>
+                          </Border>
+                          <TopBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </TopBorder>
+                          <BottomBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </BottomBorder>
+                          <LeftBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </LeftBorder>
+                          <RightBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </RightBorder>
+                          <BackgroundColor>White</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixCornerCell>
+                </TablixCornerRow>
+              </TablixCornerRows>
+            </TablixCorner>
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>39.36742mm</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>6mm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="TotalValueByYearCompanyLevel23456">
+                          <rd:DefaultName>TotalValueByYearCompanyLevel23456</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!TotalValueByYearCompanyLevel23456.Value)</Value>
+                                  <Style>
+                                    <FontWeight>Normal</FontWeight>
+                                    <Format>#,0.0'₫';(#,0.0'₫')</Format>
+                                    <Color>#333333</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <BackgroundColor>White</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="pre_year">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!Previous_Year.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!year.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>6mm</Size>
+                    <CellContents>
+                      <Textbox Name="year">
+                        <rd:DefaultName>year</rd:DefaultName>
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>Năm </Value>
+                                <Style>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>#333333</Color>
+                                </Style>
+                              </TextRun>
+                              <TextRun>
+                                <Value>=Fields!year.Value</Value>
+                                <Style>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>#333333</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <Style>
+                          <Border>
+                            <Style>Solid</Style>
+                          </Border>
+                          <TopBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </TopBorder>
+                          <BottomBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </BottomBorder>
+                          <LeftBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </LeftBorder>
+                          <RightBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </RightBorder>
+                          <BackgroundColor>White</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="level2_id">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!level2_id.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!level2_id.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>74.50408mm</Size>
+                    <CellContents>
+                      <Textbox Name="level2_name1">
+                        <rd:DefaultName>level2_name1</rd:DefaultName>
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Fields!level2_name.Value</Value>
+                                <Style>
+                                  <FontWeight>Bold</FontWeight>
+                                  <Color>#333333</Color>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Left</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <Style>
+                          <Border>
+                            <Style>Solid</Style>
+                          </Border>
+                          <TopBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </TopBorder>
+                          <BottomBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </BottomBorder>
+                          <LeftBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </LeftBorder>
+                          <RightBorder>
+                            <Color>Black</Color>
+                            <Style>Solid</Style>
+                            <Width>1pt</Width>
+                          </RightBorder>
+                          <BackgroundColor>White</BackgroundColor>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember>
+                      <Group Name="level2_name">
+                        <GroupExpressions>
+                          <GroupExpression>=Fields!level2_name.Value</GroupExpression>
+                        </GroupExpressions>
+                      </Group>
+                      <SortExpressions>
+                        <SortExpression>
+                          <Value>=Fields!level2_name.Value</Value>
+                        </SortExpression>
+                      </SortExpressions>
+                      <TablixHeader>
+                        <Size>15.66075mm</Size>
+                        <CellContents>
+                          <Textbox Name="level2_id">
+                            <rd:DefaultName>level2_id</rd:DefaultName>
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>=Fields!level2_id.Value</Value>
+                                    <Style>
+                                      <FontWeight>Normal</FontWeight>
+                                      <Color>#333333</Color>
+                                    </Style>
+                                  </TextRun>
+                                </TextRuns>
+                                <Style>
+                                  <TextAlign>Center</TextAlign>
+                                </Style>
+                              </Paragraph>
+                            </Paragraphs>
+                            <Style>
+                              <Border>
+                                <Style>Solid</Style>
+                              </Border>
+                              <TopBorder>
+                                <Color>Black</Color>
+                                <Style>Solid</Style>
+                                <Width>1pt</Width>
+                              </TopBorder>
+                              <BottomBorder>
+                                <Color>Black</Color>
+                                <Style>Solid</Style>
+                                <Width>1pt</Width>
+                              </BottomBorder>
+                              <LeftBorder>
+                                <Color>Black</Color>
+                                <Style>Solid</Style>
+                                <Width>1pt</Width>
+                              </LeftBorder>
+                              <RightBorder>
+                                <Color>Black</Color>
+                                <Style>Solid</Style>
+                                <Width>1pt</Width>
+                              </RightBorder>
+                              <BackgroundColor>White</BackgroundColor>
+                              <VerticalAlign>Middle</VerticalAlign>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixHeader>
+                      <TablixMembers>
+                        <TablixMember />
+                      </TablixMembers>
+                    </TablixMember>
+                  </TablixMembers>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>test2</DataSetName>
+            <Top>52.68533mm</Top>
+            <Left>7.94267mm</Left>
+            <Height>12mm</Height>
+            <Width>129.53225mm</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <TopBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </TopBorder>
+              <BottomBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </BottomBorder>
+              <LeftBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </RightBorder>
+            </Style>
+          </Tablix>
+          <Rectangle Name="Rectangle2">
+            <ReportItems>
+              <Textbox Name="Textbox10">
+                <rd:DefaultName>Textbox10</rd:DefaultName>
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Báo cáo kết quả hoạt động kinh doanh</Value>
+                        <Style>
+                          <FontFamily>Times New Roman</FontFamily>
+                          <FontSize>18pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>3.59833mm</Top>
+                <Left>15.04433mm</Left>
+                <Height>9.94834mm</Height>
+                <Width>108.15189mm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Rectangle Name="Rectangle3">
+                <ReportItems>
+                  <Textbox Name="Textbox11">
+                    <rd:DefaultName>Textbox11</rd:DefaultName>
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>Mẫu số B02 - DN</Value>
+                            <Style>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>Ban hành theo thông tư số 200/2014/TT-BTC</Value>
+                            <Style>
+                              <FontStyle>Italic</FontStyle>
+                              <FontWeight>Normal</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>ngày 22/12/2014 của Bộ Tài Chính</Value>
+                            <Style>
+                              <FontStyle>Italic</FontStyle>
+                              <FontWeight>Normal</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <Top>0mm</Top>
+                    <Left>0mm</Left>
+                    <Height>30.17812mm</Height>
+                    <Width>30.66099mm</Width>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>6.13833mm</Top>
+                <Left>130.03388mm</Left>
+                <Height>31.44812mm</Height>
+                <Width>30.66099mm</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>Solid</Style>
+                  </Border>
+                  <TopBorder>
+                    <Color>Black</Color>
+                    <Style>Solid</Style>
+                    <Width>1pt</Width>
+                  </TopBorder>
+                  <BottomBorder>
+                    <Color>Black</Color>
+                    <Style>Solid</Style>
+                    <Width>1pt</Width>
+                  </BottomBorder>
+                  <LeftBorder>
+                    <Color>Black</Color>
+                    <Style>Solid</Style>
+                    <Width>1pt</Width>
+                  </LeftBorder>
+                  <RightBorder>
+                    <Color>Black</Color>
+                    <Style>Solid</Style>
+                    <Width>1pt</Width>
+                  </RightBorder>
+                </Style>
+              </Rectangle>
+              <Textbox Name="Textbox82">
+                <rd:DefaultName>Textbox82</rd:DefaultName>
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Parameters!dimcompanycompanyname.Value</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>17.22966mm</Top>
+                <Left>39.72277mm</Left>
+                <Height>6.77333mm</Height>
+                <Width>83.96112mm</Width>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox83">
+                <rd:DefaultName>Textbox83</rd:DefaultName>
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Tên công ty:</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>17.145mm</Top>
+                <Left>15.04433mm</Left>
+                <Height>6.858mm</Height>
+                <Width>24.67844mm</Width>
+                <ZIndex>3</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox84">
+                <rd:DefaultName>Textbox84</rd:DefaultName>
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Kỳ tính thuế:</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>26.11966mm</Top>
+                <Left>15.04433mm</Left>
+                <Height>6mm</Height>
+                <Width>25mm</Width>
+                <ZIndex>4</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox86">
+                <rd:DefaultName>Textbox86</rd:DefaultName>
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Năm </Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                      <TextRun>
+                        <Value>=Parameters!dimdateyear.Value(1)</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <Top>26.11966mm</Top>
+                <Left>40.39711mm</Left>
+                <Height>6mm</Height>
+                <Width>25mm</Width>
+                <ZIndex>5</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>8.67833mm</Top>
+            <Left>7.94267mm</Left>
+            <Height>42.24311mm</Height>
+            <Width>169.323mm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <TopBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </TopBorder>
+              <BottomBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </BottomBorder>
+              <LeftBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </RightBorder>
+            </Style>
+          </Rectangle>
+        </ReportItems>
+        <Height>92.45299mm</Height>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Body>
+      <Width>193.799mm</Width>
+      <Page>
+        <PageFooter>
+          <Height>44.23833mm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="ExecutionTime">
+              <rd:DefaultName>ExecutionTime</rd:DefaultName>
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!ExecutionTime</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>19.05001mm</Top>
+              <Left>104.63847mm</Left>
+              <Height>6.35mm</Height>
+              <Width>63.99907mm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
+        <PageHeight>29.7cm</PageHeight>
+        <PageWidth>21cm</PageWidth>
+        <LeftMargin>1cm</LeftMargin>
+        <RightMargin>1cm</RightMargin>
+        <TopMargin>1cm</TopMargin>
+        <BottomMargin>1cm</BottomMargin>
+        <ColumnSpacing>0.13cm</ColumnSpacing>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="dimdateyear">
+      <DataType>Integer</DataType>
+      <Prompt>Chọn năm</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dimdateyear</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+      <cl:ComponentMetadata>
+        <cl:HideUpdateNotifications>true</cl:HideUpdateNotifications>
+      </cl:ComponentMetadata>
+    </ReportParameter>
+    <ReportParameter Name="dimcompanycompanyname">
+      <DataType>String</DataType>
+      <Prompt>Chọn công ty</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dimcompanycompanyname</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <cl:ComponentMetadata>
+        <cl:HideUpdateNotifications>true</cl:HideUpdateNotifications>
+      </cl:ComponentMetadata>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>dimdateyear</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>dimcompanycompanyname</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <DeferVariableEvaluation>true</DeferVariableEvaluation>
+</Report>
